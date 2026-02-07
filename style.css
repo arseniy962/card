@@ -1,0 +1,176 @@
+/* селектор * применяется ко всем элементам */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url(https://images.pexels.com/photos/7231429/pexels-photo-7231429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: white;
+    width: 420px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.avatar {
+    width: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgb(255, 2, 2)
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(255, 5, 5);
+    margin-bottom: 10 px;
+}
+
+.title {
+    color: rgb(255, 0, 0);
+    font-size: 18px;
+    font-weight: 500;
+    width: 0;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #37c70b;
+    animation: typing 4s steps(40, end) infinite, cursor 0.8s steps(1, end) infinite;
+}
+
+@keyframes typing {
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes cursor {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgb(87, 0, 87);
+    }
+}
+
+.description {
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(102, 126, 234, 0.05);
+    border: 1px solid rgba(136, 255, 0, 0.1);
+    border-radius: 16 px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.experiance-number {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    color: #f5f103;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.experiance-label {
+    font-size: 20px;
+    color: gray;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+li {
+    background: linear-gradient(135deg, #f8991c, #f3e410);
+    padding: 15px 30px;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-2px);
+}
+
+.link-project {
+    color: rgb(253, 103, 16);
+    text-decoration: none;
+    background-color: rgba(102, 126, 234, 0.1);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 12px 0;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+.link-project:hover {
+    background-color: #f31008;
+    color: white;
+}
+
+
+/*смартфоны-320px, 480px и более
+планшеты-768px и более
+нетбуки-1024px и более
+мониторы-1280px, 1600px, 1920px и более*/
+
+@media (max-width: 480px) {
+    .card {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .stats {
+        justify-content: center;
+        gap: 20px;
+    }
+}
